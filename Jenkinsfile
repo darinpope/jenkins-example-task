@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('run task') {
       steps {
-        sh 'task -v build'
+        sh 'task build'
       }
     }
   }
