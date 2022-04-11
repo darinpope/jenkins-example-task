@@ -1,0 +1,6 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - ffmpeg -i {{.INPUT_VIDEO_FILE}} -map 0 -map -0:a -filter:v "select='gt(scene,0.4)',showinfo" -max_muxing_queue_size 1024 -f null -
